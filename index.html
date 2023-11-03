@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- add style file -->
+        <link rel="stylesheet" href="./style.css">
+        <title>Gallery project</title>
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    </head>
+    <body> 
+        <header>
+            <nav>
+                <h1>Gallery</h1>
+                <ul class="menu">
+                    <li><a href="#aboutAuthor">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#info">Contact</a></li>
+                </ul>
+            </nav>
+            <section class="slider">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="./img/landscap1.jpg" alt="">
+                        <div class="slideText">Perfect landscape</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="./img/landscap2.jpg" alt="">
+                        <div class="slideText">A long way</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="./img/landscap3.jpg" alt="">
+                        <div class="slideText">Mountains</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="about">
+                <div class="author">
+                    <img class="authorImg" src="./img/author_alex.jpg" alt="author of this works">
+                </div>
+                <div class="aboutAuthor" id="aboutAuthor">
+                    <h2>Photo Gallery</h2>
+                    <p>Meet the visionary artist, Alex, whose lens transforms moments into masterpieces. <br>
+                    With an unyielding passion for photography, she captures the world's beauty one frame at a time.<br> 
+                    Step inside her enchanting work gallery, where each image speaks volumes, painting stories with light and shadow. <br>
+                    Alex's talent transcends the ordinary, creating a visual symphony that invites you to explore the hidden depths of emotion and imagination. <br>
+                    Prepare to be captivated, as you embark on a mesmerizing journey through her lens, where every click is a portal to the extraordinary.</p>
+                </div>
+            </section>
+            <section class="gallery" id="gallery">
+                <h2>Welcome to my gallery</h2>
+                <div class="animalsBlock">
+                    <h3 class="titleBlock">Animals:</h3>
+                    <div class="row">
+                        <div class="column">
+                            <img src="./img/photo1.jpg" alt="puppy dog" onclick="OpenPhoto(this);">
+                        </div>
+                        <div class="column">
+                            <img src="./img/photo2.jpg" alt="deer from zoo" onclick="OpenPhoto(this);">
+                        </div>
+                        <div class="column">
+                            <img src="./img/photo3.jpg" alt="pug puppy on the beach" onclick="OpenPhoto(this);">
+                        </div>
+                        <div class="column">
+                            <img src="./img/photo4.jpg" alt="kitten" onclick="OpenPhoto(this);">
+                        </div>
+                        <div class="column">
+                            <img src="./img/photo5.jpg" alt="cat and butterfly" onclick="OpenPhoto(this);">
+                        </div>
+                    </div>
+                    <h3 class="titleBlock">People:</h3>
+                    <div class="row">
+                        <div class="column">
+                            <img src="./img/people1.jpg" alt="puppy dog" onclick="OpenPhoto(this);">
+                        </div>
+                        <div class="column">
+                            <img src="./img/people3.jpg" alt="deer from zoo" onclick="OpenPhoto(this);">
+                        </div>
+                        <div class="column">
+                            <img src="./img/people2.jpg" alt="pug puppy on the beach" onclick="OpenPhoto(this);">
+                        </div>
+                    </div>
+                    
+                    <div id="modal" class="modal">
+                        <span class="modalClose" id="modalClose">&times;</span>
+        
+                        <img class="modal-content" id="modalImg">
+                        <div class="imgText" id="imgText"></div>
+        
+                    </div>
+                </div>
+            </section>
+            <section class="contact"></section>
+        </main>
+        <footer>
+            <div class="infoFooter" id="info">
+                <div class="social">
+                    <h3>My media:</h3>
+                    <img src="./img/icons8-facebook-96.png" alt="my facebook">
+                    <img src="./img/icons8-instagram-100.png" alt="my instagram">
+                </div>
+                <div class="contact">
+                    <h3>My contact</h3>
+                    <p>alex_photo@gmail.com</p>
+                </div>
+                <div class="createdBy">
+                    <h3>Created by:</h3>
+                    <p>Design Company</p>
+                    <p>in 2023</p>
+                </div>
+            </div>
+        </footer>
+        <script src="./gallery.js"></script>
+    </body>
+</html>
